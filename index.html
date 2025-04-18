@@ -7,18 +7,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
-    .smooth-scroll { scroll-behavior: smooth; }
-    .nav-link { position: relative; }
-    .nav-link::after {
-      content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0;
-      background-color: #1e40af; transition: width 0.3s ease;
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
-    .nav-link:hover::after { width: 100%; }
+    .logo-spin {
+      animation: spin 8s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
     .animate-section {
       opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.6s ease-out;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     }
     .animate-section.visible {
       opacity: 1;
@@ -26,31 +30,30 @@
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-900 smooth-scroll">
+<body class="bg-blue-50 text-gray-800">
 
-<!-- Navigation -->
+<!-- Navbar -->
 <nav class="bg-white shadow fixed w-full z-20">
   <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
     <div class="flex items-center space-x-2">
-      <!-- New Logo -->
-      <div class="w-10 h-10 bg-blue-800 rounded-full flex items-center justify-center text-white font-bold text-xl">N</div>
-      <h1 class="text-2xl font-bold text-blue-800">Nordicora</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Globe_icon_light.svg/512px-Globe_icon_light.svg.png" alt="Logo" class="w-10 h-10 logo-spin">
+      <h1 class="text-2xl font-bold text-blue-700">Nordicora</h1>
     </div>
-    <div class="flex space-x-6">
-      <a href="#home" class="nav-link text-gray-700 hover:text-blue-800">Home</a>
-      <a href="#services" class="nav-link text-gray-700 hover:text-blue-800">Services</a>
-      <a href="#about" class="nav-link text-gray-700 hover:text-blue-800">About</a>
-      <a href="#contact" class="nav-link text-gray-700 hover:text-blue-800">Contact</a>
+    <div class="hidden md:flex space-x-6 text-sm">
+      <a href="#home" class="hover:text-blue-800">Home</a>
+      <a href="#services" class="hover:text-blue-800">Services</a>
+      <a href="#about" class="hover:text-blue-800">About</a>
+      <a href="#contact" class="hover:text-blue-800">Contact</a>
     </div>
   </div>
 </nav>
 
-<!-- Home Section -->
-<section id="home" class="min-h-screen flex items-center justify-center text-center bg-gradient-to-br from-blue-700 to-indigo-900 text-white px-4 pt-32">
-  <div class="max-w-3xl animate-section">
+<!-- Home -->
+<section id="home" class="min-h-screen bg-gradient-to-br from-blue-200 to-blue-500 text-white flex items-center justify-center text-center px-4 pt-32">
+  <div class="animate-section max-w-3xl">
     <h2 class="text-5xl font-bold mb-4">Welcome to Nordicora</h2>
     <p class="text-xl mb-6">Bridging Asia and Europe with Excellence</p>
-    <a href="#services" class="bg-white text-blue-800 py-3 px-6 rounded-full font-semibold hover:bg-gray-100 transition">Explore Services</a>
+    <a href="#services" class="bg-white text-blue-700 py-3 px-6 rounded-full font-semibold hover:bg-gray-100">Explore Services</a>
   </div>
 </section>
 
@@ -59,32 +62,59 @@
   <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <!-- Service Cards -->
-      <div class="bg-gray-100 p-6 rounded-xl shadow"> <h3 class="text-xl font-semibold text-blue-800 mb-2">Sales & Business Development</h3><p>We connect products with global markets.</p></div>
-      <div class="bg-gray-100 p-6 rounded-xl shadow"> <h3 class="text-xl font-semibold text-blue-800 mb-2">Marketing & Branding</h3><p>Crafting brand stories and campaigns.</p></div>
-      <div class="bg-gray-100 p-6 rounded-xl shadow"> <h3 class="text-xl font-semibold text-blue-800 mb-2">Freighting & Logistics</h3><p>Efficient delivery and compliance.</p></div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Sales & Business Development</h3>
+        <p>Connect your products with strategic sales support in global markets.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Marketing & Branding</h3>
+        <p>Build strong brand awareness and campaigns across borders.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Freighting & Logistics</h3>
+        <p>Efficient international shipping, customs, and delivery handling.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Market Research & Strategy</h3>
+        <p>Analyze and enter new markets with confidence and clarity.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Distribution & Fulfillment</h3>
+        <p>Scale your operations smoothly across Europe and Asia.</p>
+      </div>
+      <div class="bg-blue-50 p-6 rounded-xl shadow hover:shadow-xl">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2">Regulatory Compliance</h3>
+        <p>We handle certifications and documentation for all your products.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- About -->
-<section id="about" class="py-20 bg-gray-100 animate-section">
+<section id="about" class="py-20 bg-blue-100 animate-section">
   <div class="max-w-4xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold text-gray-800 mb-8">About Nordicora</h2>
-    <p class="text-lg text-gray-700 mb-4">We are your trusted partner in global trade, connecting Nordic values and Asian flavors with integrity and professionalism.</p>
+    <p class="text-lg text-gray-700 mb-4">Nordicora is your trusted partner in international trade, blending Nordic reliability with Asian heritage.</p>
+    <ul class="text-left list-disc text-gray-700 max-w-xl mx-auto space-y-2">
+      <li>Years of cross-cultural trade expertise</li>
+      <li>Global partnerships and vetted suppliers</li>
+      <li>Compliance, logistics, and distribution in-house</li>
+      <li>Transparent, ethical, and premium delivery</li>
+    </ul>
   </div>
 </section>
 
-<!-- Contact Form -->
+<!-- Contact -->
 <section id="contact" class="py-20 bg-white animate-section">
-  <div class="max-w-3xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-10">Contact Us</h2>
-    <form action="https://formspree.io/f/xwkdnyzv" method="POST" class="space-y-6">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 border rounded">
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-4 border rounded">
-      <textarea name="message" rows="5" placeholder="Your Message" required class="w-full p-4 border rounded"></textarea>
-      <button type="submit" class="bg-blue-700 text-white px-6 py-3 rounded-full hover:bg-blue-800 transition">Send Message</button>
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-bold text-gray-800 mb-6">Contact Us</h2>
+    <form name="contact" method="POST" data-netlify="true" class="grid gap-6 text-left max-w-xl mx-auto">
+      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 rounded border border-gray-300">
+      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 rounded border border-gray-300">
+      <textarea name="message" placeholder="Your Message" rows="5" required class="w-full p-3 rounded border border-gray-300"></textarea>
+      <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Send Message</button>
     </form>
+    <p class="text-gray-600 mt-8">Location: Grindsted, Denmark | Email: <a href="mailto:info@nordicora.com" class="text-blue-600 font-medium hover:underline">info@nordicora.com</a></p>
   </div>
 </section>
 
@@ -108,7 +138,7 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.1 });
   sections.forEach(section => observer.observe(section));
 </script>
 
