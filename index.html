@@ -1,29 +1,43 @@
+Here's the enhanced version of the HTML with improvements in SEO, accessibility, performance, and user experience:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nordicora - Bridging Asia & Europe</title>
+  <meta name="description" content="Nordicora bridges Asia and Europe through premium trade services, specializing in luxury goods, ethical sourcing, and seamless global logistics solutions.">
+  <title>Nordicora - Premium Trade Services Between Asia & Europe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://kit.fontawesome.com">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/a2d0452c4d.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    .animate-section { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
-    .animate-section.visible { opacity: 1; transform: translateY(0); }
+    .animate-section { 
+      opacity: 0; 
+      transform: translateY(30px); 
+      transition: all 0.6s ease-out; 
+    }
+    .animate-section.visible { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
   </style>
 </head>
 <body class="bg-sky-50 text-gray-800">
 
 <!-- Navbar -->
-<nav class="bg-white shadow fixed w-full z-30">
+<nav class="bg-white shadow fixed w-full z-30" aria-label="Main navigation">
   <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
     <h1 class="text-xl sm:text-2xl font-bold text-sky-600">Nordicora</h1>
-    <div class="flex flex-wrap justify-center space-x-4 text-sm sm:text-base mt-2 sm:mt-0">
-      <a href="#home" class="text-sky-800 hover:text-sky-600">Home</a>
-      <a href="#services" class="text-sky-800 hover:text-sky-600">Services</a>
-      <a href="#about" class="text-sky-800 hover:text-sky-600">About</a>
-      <a href="#contact" class="text-sky-800 hover:text-sky-600">Contact</a>
+    <div class="flex flex-wrap justify-center gap-4 text-sm sm:text-base mt-2 sm:mt-0">
+      <a href="#home" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Home</a>
+      <a href="#services" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Services</a>
+      <a href="#about" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">About</a>
+      <a href="#contact" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Contact</a>
     </div>
   </div>
 </nav>
@@ -31,93 +45,93 @@
 <!-- Home Section -->
 <section id="home" class="min-h-screen bg-gradient-to-r from-sky-300 to-sky-500 text-white flex items-center justify-center text-center px-4 pt-32">
   <div class="animate-section max-w-4xl">
-    <h2 class="text-4xl sm:text-5xl font-bold mb-6">Welcome to Nordicora</h2>
-    <p class="text-lg sm:text-xl mb-6">Bridging Asia and Europe with Excellence</p>
-    <p class="mb-6">At Nordicora, we specialize in the export and import of premium and luxury products, connecting the rich heritage of Asia with the refined markets of Europe. Our mission is simple: we deliver exceptional goods that represent the best of quality, craftsmanship, and cultural value.</p>
-    <p class="mb-6">Whether you're a boutique retailer, distributor, or brand seeking global reach, Nordicora is your reliable partner in cross-continental commerce.</p>
-    <h3 class="text-2xl font-semibold mb-4">What We Offer</h3>
-    <ul class="text-left list-disc list-inside space-y-1 mb-6">
-      <li>Ethically Sourced Spices & Gourmet Items</li>
-      <li>Luxury Goods & Lifestyle Products</li>
-      <li>Artisanal & Heritage Imports</li>
-      <li>Fashion & Sustainable Textiles</li>
-      <li>Tailored B2B Trade Solutions</li>
-    </ul>
-    <h3 class="text-2xl font-semibold mb-4">Why Choose Nordicora?</h3>
-    <ul class="text-left list-disc list-inside space-y-1">
-      <li>High standards of quality and authenticity</li>
-      <li>Seamless import/export operations</li>
-      <li>Trusted supplier relationships across Asia and Europe</li>
-      <li>Compliance with EU and international trade regulations</li>
-      <li>Personalized service with a global mindset</li>
-    </ul>
+    <!-- ... (same home content as before) ... -->
   </div>
 </section>
 
 <!-- Services Section -->
-<section id="services" class="py-20 bg-white animate-section">
+<section id="services" class="py-20 bg-white animate-section" aria-label="Our services">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
-    <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 list-disc list-inside text-gray-700">
-      <li><strong>Sales & Business Development:</strong> Strategic sales support tailored to each market.</li>
-      <li><strong>Marketing & Branding:</strong> Strong brand positioning through digital and traditional methods.</li>
-      <li><strong>Freighting & Logistics:</strong> Reliable global shipment management.</li>
-      <li><strong>Market Research & Strategy:</strong> Feasibility studies and entry planning.</li>
-      <li><strong>Distribution & Fulfillment:</strong> Scalable, cross-border delivery systems.</li>
-      <li><strong>Regulatory Compliance & Certifications:</strong> Full documentation and legal support.</li>
-    </ul>
+    <!-- ... (same services content as before) ... -->
   </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-20 bg-sky-100 animate-section">
+<section id="about" class="py-20 bg-sky-100 animate-section" aria-label="About us">
   <div class="max-w-4xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-gray-800 mb-8">About Nordicora</h2>
-    <p class="text-lg text-gray-700 mb-6">We are connectors of cultures, markets, and opportunities. Founded by industry experts, Nordicora offers a modern, reliable solution for moving high-quality goods between Asia and Europe.</p>
-    <ul class="text-left list-disc list-inside max-w-2xl mx-auto space-y-2 text-gray-700">
-      <li>Decades of global trade and logistics experience</li>
-      <li>Global partnerships and supplier relationships</li>
-      <li>Custom trade solutions from research to compliance</li>
-    </ul>
-    <p class="mt-6 text-gray-700"><strong>Mission:</strong> To simplify ethical and successful global trade.</p>
-    <p class="text-gray-700"><strong>Vision:</strong> To blend Nordic reliability with global ambition in boutique international trade.</p>
+    <!-- ... (same about content as before) ... -->
   </div>
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-20 bg-white animate-section">
+<section id="contact" class="py-20 bg-white animate-section" aria-label="Contact form">
   <div class="max-w-xl mx-auto px-6 text-center">
     <h2 class="text-4xl font-bold text-gray-800 mb-6">Contact Us</h2>
     <p class="text-gray-600 mb-4">Partner with Nordicora to bridge Asia and Europe, one product at a time.</p>
-    <form name="contact" method="POST" data-netlify="true" class="space-y-4">
-      <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded" />
-      <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded" />
-      <textarea name="message" rows="4" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded"></textarea>
-      <button type="submit" class="bg-sky-600 text-white font-semibold px-6 py-3 rounded hover:bg-sky-700">Send Message</button>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+      <p class="hidden">
+        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+      </p>
+      <input type="text" name="name" placeholder="Your Name" required 
+             class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500">
+      <input type="email" name="email" placeholder="Your Email" required 
+             class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500">
+      <textarea name="message" rows="4" placeholder="Your Message" required 
+                class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500"></textarea>
+      <button type="submit" 
+              class="bg-sky-600 text-white font-semibold px-6 py-3 rounded hover:bg-sky-700 transition-colors duration-300">
+        Send Message
+      </button>
     </form>
+    <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded">
+      Message sent successfully!
+    </div>
   </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-gray-900 text-white text-center py-8">
   <div class="flex justify-center space-x-6 mb-4">
-    <a href="https://facebook.com/nordicora" target="_blank" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://instagram.com/nordicora" target="_blank" class="hover:text-pink-400"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/4512345678" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://linkedin.com/company/nordicora" target="_blank" class="hover:text-blue-300"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://facebook.com/nordicora" target="_blank" rel="noopener noreferrer" 
+       class="hover:text-blue-400" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://instagram.com/nordicora" target="_blank" rel="noopener noreferrer"
+       class="hover:text-pink-400" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/4512345678" target="_blank" rel="noopener noreferrer"
+       class="hover:text-green-400" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://linkedin.com/company/nordicora" target="_blank" rel="noopener noreferrer"
+       class="hover:text-blue-300" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
   </div>
-  <p>&copy; 2025 Nordicora. All rights reserved.</p>
+  <p>&copy; <span id="current-year"></span> Nordicora. All rights reserved.</p>
 </footer>
 
 <script>
+  // Dynamic copyright year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+
+  // Smooth scroll and animations
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      document.querySelector(this.getAttribute('href')).scrollIntoView({ 
+        behavior: 'smooth' 
+      });
     });
   });
 
+  // Staggered animations with delay
   const sections = document.querySelectorAll('.animate-section');
+  sections.forEach((section, index) => {
+    section.style.transitionDelay = `${index * 0.2}s`;
+  });
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -125,9 +139,25 @@
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.15 });
+  
   sections.forEach(section => observer.observe(section));
+
+  // Form success handling
+  if (window.location.search.includes('form_submitted=true')) {
+    const successMessage = document.getElementById('form-success');
+    successMessage.classList.remove('hidden');
+    setTimeout(() => successMessage.classList.add('hidden'), 5000);
+  }
 </script>
+
+<noscript>
+  <div class="fixed top-0 left-0 right-0 bg-yellow-100 text-center p-2">
+    Please enable JavaScript for the best experience on our website.
+  </div>
+</noscript>
 
 </body>
 </html>
+
+
