@@ -1,161 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nordicora bridges Asia and Europe through premium trade services, specializing in luxury goods, ethical sourcing, and seamless global logistics solutions.">
-  <title>Nordicora - Premium Trade Services Between Asia & Europe</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://kit.fontawesome.com">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a2d0452c4d.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
-    .animate-section { 
-      opacity: 0; 
-      transform: translateY(30px); 
-      transition: all 0.6s ease-out; 
-    }
-    .animate-section.visible { 
-      opacity: 1; 
-      transform: translateY(0); 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordicora - Global Trade Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+        .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
+    </style>
 </head>
-<body class="bg-sky-50 text-gray-800">
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center float-anim transition-all group-hover:rotate-12">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold gradient-text">Nordicora</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link hover:text-cyan-400">Home</a>
+                <a href="#services" class="nav-link hover:text-cyan-400">Services</a>
+                <a href="#about" class="nav-link hover:text-cyan-400">About</a>
+                <a href="#contact" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav class="bg-white shadow fixed w-full z-30" aria-label="Main navigation">
-  <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row items-center justify-between">
-    <h1 class="text-xl sm:text-2xl font-bold text-sky-600">Nordicora</h1>
-    <div class="flex flex-wrap justify-center gap-4 text-sm sm:text-base mt-2 sm:mt-0">
-      <a href="#home" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Home</a>
-      <a href="#services" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Services</a>
-      <a href="#about" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">About</a>
-      <a href="#contact" class="text-sky-800 hover:text-sky-600 px-2 py-1 rounded">Contact</a>
-    </div>
-  </div>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-32">
+        <div class="container mx-auto px-6">
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Connecting <span class="gradient-text">Global Markets</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl">
+                    Premium trade solutions between Asia & Europe with a decade of expertise in luxury goods and strategic logistics
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button class="cta-btn bg-cyan-600 hover:bg-cyan-700">
+                        Explore Services
+                    </button>
+                    <button class="cta-btn border border-cyan-500 hover:border-cyan-400">
+                        Watch Overview
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="gradient-blob cyan"></div>
+            <div class="gradient-blob purple"></div>
+        </div>
+    </section>
 
-<!-- Home Section -->
-<section id="home" class="min-h-screen bg-gradient-to-r from-sky-300 to-sky-500 text-white flex items-center justify-center text-center px-4 pt-32">
-  <div class="animate-section max-w-4xl">
-    <!-- ... (same home content as before) ... -->
-  </div>
-</section>
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Our Solutions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="icon-container glow">
+                        <svg class="service-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                        </svg>
+                    </div>
+                    <h3>Luxury Goods Logistics</h3>
+                    <p>Secure transportation for high-value items with climate control</p>
+                </div>
+                
+                <!-- Add two more service cards -->
+            </div>
+        </div>
+    </section>
 
-<!-- Services Section -->
-<section id="services" class="py-20 bg-white animate-section" aria-label="Our services">
-  <div class="max-w-6xl mx-auto px-6">
-    <!-- ... (same services content as before) ... -->
-  </div>
-</section>
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="gradient-border p-1 rounded-3xl">
+                        <img src="https://source.unsplash.com/800x600/?cargo" alt="Shipping" class="rounded-2xl w-full">
+                    </div>
+                    <div class="stats-card" data-aos="fade-up" data-aos-delay="400">
+                        <h4>15+ Years Experience</h4>
+                        <p>Trusted since 2008</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h2 class="text-4xl font-bold mb-6">Our Global Network</h2>
+                    <p class="text-gray-400 text-lg mb-8">
+                        With headquarters in Stockholm and Shanghai, we maintain strategic partnerships across 23 countries, ensuring seamless trade operations.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="feature-item">
+                            <svg class="check-icon">...</svg>
+                            ISO 9001 Certified
+                        </div>
+                        <!-- Add more features -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- About Section -->
-<section id="about" class="py-20 bg-sky-100 animate-section" aria-label="About us">
-  <div class="max-w-4xl mx-auto px-6 text-center">
-    <!-- ... (same about content as before) ... -->
-  </div>
-</section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <div class="contact-card" data-aos="flip-up">
+                <h2>Start Your Global Journey</h2>
+                <form class="space-y-6">
+                    <input type="text" placeholder="Your Name" class="form-input">
+                    <input type="email" placeholder="Email Address" class="form-input">
+                    <textarea rows="4" placeholder="Your Message" class="form-input"></textarea>
+                    <button class="submit-btn">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-20 bg-white animate-section" aria-label="Contact form">
-  <div class="max-w-xl mx-auto px-6 text-center">
-    <h2 class="text-4xl font-bold text-gray-800 mb-6">Contact Us</h2>
-    <p class="text-gray-600 mb-4">Partner with Nordicora to bridge Asia and Europe, one product at a time.</p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
-      <p class="hidden">
-        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-      </p>
-      <input type="text" name="name" placeholder="Your Name" required 
-             class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500">
-      <input type="email" name="email" placeholder="Your Email" required 
-             class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500">
-      <textarea name="message" rows="4" placeholder="Your Message" required 
-                class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-sky-500"></textarea>
-      <button type="submit" 
-              class="bg-sky-600 text-white font-semibold px-6 py-3 rounded hover:bg-sky-700 transition-colors duration-300">
-        Send Message
-      </button>
-    </form>
-    <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded">
-      Message sent successfully!
-    </div>
-  </div>
-</section>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad',
+            offset: 120
+        });
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white text-center py-8">
-  <div class="flex justify-center space-x-6 mb-4">
-    <a href="https://facebook.com/nordicora" target="_blank" rel="noopener noreferrer" 
-       class="hover:text-blue-400" aria-label="Facebook">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://instagram.com/nordicora" target="_blank" rel="noopener noreferrer"
-       class="hover:text-pink-400" aria-label="Instagram">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://wa.me/4512345678" target="_blank" rel="noopener noreferrer"
-       class="hover:text-green-400" aria-label="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://linkedin.com/company/nordicora" target="_blank" rel="noopener noreferrer"
-       class="hover:text-blue-300" aria-label="LinkedIn">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-  </div>
-  <p>&copy; <span id="current-year"></span> Nordicora. All rights reserved.</p>
-</footer>
+        // Smooth scroll functionality
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
 
-<script>
-  // Dynamic copyright year
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-
-  // Smooth scroll and animations
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({ 
-        behavior: 'smooth' 
-      });
-    });
-  });
-
-  // Staggered animations with delay
-  const sections = document.querySelectorAll('.animate-section');
-  sections.forEach((section, index) => {
-    section.style.transitionDelay = `${index * 0.2}s`;
-  });
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
-  
-  sections.forEach(section => observer.observe(section));
-
-  // Form success handling
-  if (window.location.search.includes('form_submitted=true')) {
-    const successMessage = document.getElementById('form-success');
-    successMessage.classList.remove('hidden');
-    setTimeout(() => successMessage.classList.add('hidden'), 5000);
-  }
-</script>
-
-<noscript>
-  <div class="fixed top-0 left-0 right-0 bg-yellow-100 text-center p-2">
-    Please enable JavaScript for the best experience on our website.
-  </div>
-</noscript>
-
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
-
-
