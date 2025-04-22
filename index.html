@@ -20,15 +20,6 @@
         .float-anim { animation: float 4s ease-in-out infinite; }
         .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
-        .gradient-blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(100px);
-            opacity: 0.3;
-        }
-        .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
-        .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
-        .cta-btn { padding: 1rem 2rem; border-radius: 9999px; transition: background 0.3s, border 0.3s; }
         nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
         /* Enhanced Section Button Styles with Animation */
         .section-button {
@@ -52,17 +43,16 @@
             @apply scale-105 shadow-lg;
             animation: pulse 1s infinite;
         }
-        /* Hero Section Background with Spices Image */
-        .hero-bg {
-            position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c') no-repeat center center/cover;
+        /* Hero Section Styling */
+        .hero-section {
+            background: #f8f9fa;
+            color: #1f2937;
         }
-        /* Subtle Overlay for Readability */
-        .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
+        .content-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -87,50 +77,46 @@
         </div>
     </nav>
 
-    <!-- Enhanced Hero Section with Spices Background -->
-    <section class="hero-bg min-h-screen flex items-center pt-32 relative">
-        <!-- Section Jump Buttons with Animation -->
-        <div class="container mx-auto px-6 pt-12 flex flex-wrap justify-center">
-            <a href="index.html" class="section-button">Home</a>
-            <a href="services.html" class="section-button">Services</a>
-            <a href="about.html" class="section-button">About Us</a>
-            <a href="contact.html" class="section-button">Contact Us</a>
-        </div>
+    <!-- Section Jump Buttons with Animation -->
+    <div class="container mx-auto px-6 pt-24 flex flex-wrap justify-center">
+        <a href="index.html" class="section-button">Home</a>
+        <a href="services.html" class="section-button">Services</a>
+        <a href="about.html" class="section-button">About Us</a>
+        <a href="contact.html" class="section-button">Contact Us</a>
+    </div>
 
-        <!-- Hero Content -->
-        <div class="container mx-auto px-6 py-12">
-            <div data-aos="fade-up" data-aos-delay="200">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Bridging <span class="gradient-text">Asia and Europe</span> with Excellence
-                </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-                    At Nordicora, we specialize in the export and import of premium and luxury products, connecting the rich heritage of Asia with the refined markets of Europe. From vibrant spices to sophisticated lifestyle products, we ensure every trade is built on trust and quality.
-                </p>
-                <!-- Highlighted Offerings -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
-                        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Ethically Sourced Spices & Gourmet Items</h3>
-                        <p class="text-gray-400">We bring the finest spices and gourmet products, sourced sustainably from Asia’s rich landscapes.</p>
-                    </div>
-                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
-                        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Luxury Goods & Lifestyle Products</h3>
-                        <p class="text-gray-400">Delivering high-end European lifestyle products to discerning Asian markets.</p>
-                    </div>
-                    <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm" data-aos="fade-up" data-aos-delay="500">
-                        <h3 class="text-lg font-semibold text-cyan-400 mb-2">Artisanal & Heritage Imports</h3>
-                        <p class="text-gray-400">Preserving cultural heritage through artisanal goods traded across continents.</p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="hero-section min-h-screen flex items-center pt-32 pb-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2">Nordicora</h1>
+                <p class="text-lg text-gray-600">Trading Flavors & Culture</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Verbose: true
+                <!-- Left Column (English) -->
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="text-3xl font-bold mb-4">Importing from Sri Lanka, India, and beyond</h2>
+                    <h3 class="text-2xl font-semibold mb-4">Exporting to South Asia and the world</h3>
+                    <img src="https://images.unsplash.com/photo-1596049908334-455717f9c8e2" alt="Spices and Tea" class="content-image mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Our Services</h4>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Import of spices, tea, handicrafts, and more</li>
+                        <li>Export of premium goods from Denmark</li>
+                    </ul>
                 </div>
-                <div class="flex flex-wrap gap-4">
-                    <a href="services.html" class="cta-btn bg-cyan-600 hover:bg-cyan-700">Explore Services</a>
-                    <button class="cta-btn border border-cyan-500 hover:border-cyan-400">Watch Overview</button>
+                <!-- Right Column (Danish) -->
+                <div data-aos="fade-left" data-aos-delay="300">
+                    <h2 class="text-3xl font-bold mb-4">Import fra Sri Lanka, Indien og andre lande</h2>
+                    <h3 class="text-2xl font-semibold mb-4">Eksport til Syddasien og resten af verden</h3>
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Danish Culture" class="content-image mb-4">
+                    <h4 class="text-xl font-semibold mb-2">Vores tjenester</h4>
+                    <ul class="list-disc list-inside text-gray-700">
+                        <li>Import af krydderier, te, kunsthåndværk og mere</li>
+                        <li>Eksport af kvalitetsvarer fra Danmark</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="absolute inset-0 -z-10 opacity-20">
-            <div class="gradient-blob cyan"></div>
-            <div class="gradient-blob purple"></div>
         </div>
     </section>
 
