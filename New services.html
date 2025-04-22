@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordicora - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+        .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+        .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
+        .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
+        .service-card { background: #1f2937; padding: 2rem; border-radius: 1rem; text-align: center; transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-10px); }
+        .icon-container { width: 64px; height: 64px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
+        .service-icon { width: 40px; height: 40px; fill: #00b4d8; }
+        nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 transition-all">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center float-anim transition-all group-hover:rotate-12">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold gradient-text">Nordicora</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Home</a>
+                <a href="services.html" class="nav-link hover:text-cyan-400 transition-colors">Services</a>
+                <a href="about.html" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="min-h-screen flex items-center pt-32 relative">
+        <div class="container mx-auto px-6">
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Our <span class="gradient-text">Services</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl">
+                    End-to-End Solutions for Global Trade. We provide a comprehensive suite of services designed to support every stage of your international trade journey. From market insight to delivery, our team ensures your products succeed.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Sales & Business Development</h3>
+                        <p class="text-gray-400">Connect your products with the right buyers through a strategic sales approach tailored to each market.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Marketing & Branding</h3>
+                        <p class="text-gray-400">Craft compelling marketing strategies to position your brand effectively in new regions.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-2-9H8v2h11V8zm0 4H8v2h11v-2zM7 8H5v2H7V8zm0 4H5v2H7v-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Freighting & Logistics</h3>
+                        <p class="text-gray-400">Manage international shipments with reliable, cost-effective, and timely logistics solutions.</p>
+                    </div>
+                    <!-- Additional Service Cards -->
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Market Research & Strategy</h3>
+                        <p class="text-gray-400">Provide in-depth market research and competitive analysis for informed market entry decisions.</p>
+                    </div>
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Distribution & Fulfillment</h3>
+                        <p class="text-gray-400">Tailored distribution channels and fulfillment solutions to scale across borders.</p>
+                    </div>
+                    <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="icon-container glow">
+                            <svg class="service-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Regulatory Compliance</h3>
+                        <p class="text-gray-400">Handle regulatory requirements, certifications, and documentation for peace of mind.</p>
+                    </div>
+                </div>
+                <p class="text-center text-gray-400 mt-12">
+                    Partner With Confidence. At Nordicora, we act as an extension of your business, taking care of the details so you can focus on what you do best. Let us help you build a bridge between Asia and Europe - one product at a time.
+                </p>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="gradient-blob cyan"></div>
+            <div class="gradient-blob purple"></div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad',
+            offset: 120
+        });
+    </script>
+</body>
+</html>
