@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordicora - Global Trade Experts</title>
+    <title>Nordicora - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -23,17 +23,10 @@
         }
         .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
         .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
-        .service-card { background: #1f2937; padding: 2rem; border-radius: 1rem; text-align: center; transition: transform 0.3s; }
-        .service-card:hover { transform: translateY(-10px); }
-        .icon-container { width: 64px; height: 64px; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; }
-        .service-icon { width: 40px; height: 40px; fill: #00b4d8; }
-        .stats-card { position: absolute; bottom: -20px; right: 20px; background: #00b4d8; padding: 1rem 2rem; border-radius: 1rem; color: white; }
-        .gradient-border { background: linear-gradient(45deg, #00b4d8, #90e0ef); }
-        .form-input { width: 100%; padding: 1rem; background: #1f2937; border: 1px solid #374151; border-radius: 0.5rem; color: white; }
-        .submit-btn { width: 100%; padding: 1rem; background: #00b4d8; border-radius: 0.5rem; hover:bg-cyan-700; transition: background 0.3s; }
         .cta-btn { padding: 1rem 2rem; border-radius: 9999px; transition: background 0.3s, border 0.3s; }
-        .feature-item { display: flex; align-items: center; gap: 0.5rem; }
-        .check-icon { width: 24px; height: 24px; fill: #00b4d8; }
+        .section-button {
+            @apply px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors text-white font-semibold mr-4 mb-4;
+        }
         nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
     </style>
 </head>
@@ -41,7 +34,7 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 transition-all">
         <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#home" class="flex items-center space-x-3 group">
+            <a href="index.html" class="flex items-center space-x-3 group">
                 <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center float-anim transition-all group-hover:rotate-12">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
@@ -50,16 +43,24 @@
                 <span class="text-2xl font-bold gradient-text">Nordicora</span>
             </a>
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="nav-link hover:text-cyan-400 transition-colors">Home</a>
+                <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Home</a>
                 <a href="services.html" class="nav-link hover:text-cyan-400 transition-colors">Services</a>
-                <a href="#about" class="nav-link hover:text-cyan-400 transition-colors">About</a>
-                <a href="#contact" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
+                <a href="about.html" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
+    <!-- Section Jump Buttons -->
+    <div class="container mx-auto px-6 pt-24 flex flex-wrap justify-center">
+        <a href="index.html" class="section-button">Home</a>
+        <a href="services.html" class="section-button">Services</a>
+        <a href="about.html" class="section-button">About Us</a>
+        <a href="contact.html" class="section-button">Contact Us</a>
+    </div>
+
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center pt-32 relative">
+    <section class="min-h-screen flex items-center pt-32 relative">
         <div class="container mx-auto px-6">
             <div data-aos="fade-up" data-aos-delay="200">
                 <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -80,144 +81,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center" data-aos="fade-up">Our Services</h2>
-            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
-                End-to-End Solutions for Global Trade. We provide a comprehensive suite of services designed to support every stage of your international trade journey. From market insight to delivery, our team ensures your products succeed.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Service Card 1 -->
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Sales & Business Development</h3>
-                    <p class="text-gray-400">Connect your products with the right buyers through a strategic sales approach tailored to each market.</p>
-                </div>
-                <!-- Service Card 2 -->
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Marketing & Branding</h3>
-                    <p class="text-gray-400">Craft compelling marketing strategies to position your brand effectively in new regions.</p>
-                </div>
-                <!-- Service Card 3 -->
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-2-9H8v2h11V8zm0 4H8v2h11v-2zM7 8H5v2H7V8zm0 4H5v2H7v-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Freighting & Logistics</h3>
-                    <p class="text-gray-400">Manage international shipments with reliable, cost-effective, and timely logistics solutions.</p>
-                </div>
-                <!-- Additional Service Cards -->
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Market Research & Strategy</h3>
-                    <p class="text-gray-400">Provide in-depth market research and competitive analysis for informed market entry decisions.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Distribution & Fulfillment</h3>
-                    <p class="text-gray-400">Tailored distribution channels and fulfillment solutions to scale across borders.</p>
-                </div>
-                <div class="service-card" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="icon-container glow">
-                        <svg class="service-icon" viewBox="0 0 24 24">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.18 5 4.05 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Regulatory Compliance</h3>
-                    <p class="text-gray-400">Handle regulatory requirements, certifications, and documentation for peace of mind.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="relative" data-aos="fade-right">
-                    <div class="gradient-border p-1 rounded-3xl">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Shipping cargo" class="rounded-2xl w-full">
-                    </div>
-                    <div class="stats-card" data-aos="fade-up" data-aos-delay="400">
-                        <h4 class="text-lg font-semibold">15+ Years Experience</h4>
-                        <p class="text-sm">Trusted since 2008</p>
-                    </div>
-                </div>
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <h2 class="text-4xl font-bold mb-6">About Nordicora</h2>
-                    <p class="text-gray-400 text-lg mb-8">
-                        Global Trade. Local Expertise. Trusted Partnerships. Founded by a team of industry experts with decades of experience, Nordicora connects cultures, markets, and opportunities. We specialize in luxury, premium, and ethically sourced products between Asia and Europe.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Decades of Industry Experience
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Global Network
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5_present_0 0 0-1.4 0 .984.984 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Full-Service Offering
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Tailored Solutions
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-lg mt-8">
-                        <strong>Mission:</strong> To make global trade simple, transparent, and successful for businesses who care about quality, ethics, and long-term growth.<br>
-                        <strong>Vision:</strong> To become a leading name in boutique international trade by blending Nordic reliability with global ambition.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6 max-w-2xl">
-            <div class="contact-card" data-aos="flip-up">
-                <h2 class="text-3xl font-bold mb-6 text-center">Start Your Global Journey</h2>
-                <form class="space-y-6">
-                    <input type="text" placeholder="Your Name" class="form-input" required>
-                    <input type="email" placeholder="Email Address" class="form-input" required>
-                    <textarea rows="4" placeholder="Your Message" class="form-input" required></textarea>
-                    <button type="submit" class="submit-btn hover:bg-cyan-700">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <script>
         // Initialize AOS animations
         AOS.init({
@@ -225,20 +88,6 @@
             once: true,
             easing: 'ease-out-quad',
             offset: 120
-        });
-
-        // Smooth scroll functionality
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
         });
 
         // Navigation scroll effect
