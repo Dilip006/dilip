@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordicora - About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+        .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+        .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
+        .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
+        .stats-card { position: absolute; bottom: -20px; right: 20px; background: #00b4d8; padding: 1rem 2rem; border-radius: 1rem; color: white; }
+        .gradient-border { background: linear-gradient(45deg, #00b4d8, #90e0ef); }
+        .feature-item { display: flex; align-items: center; gap: 0.5rem; }
+        .check-icon { width: 24px; height: 24px; fill: #00b4d8; }
+        nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 transition-all">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center float-anim transition-all group-hover:rotate-12">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold gradient-text">Nordicora</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Home</a>
+                <a href="services.html" class="nav-link hover:text-cyan-400 transition-colors">Services</a>
+                <a href="about.html" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="min-h-screen flex items-center pt-32 relative">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="gradient-border p-1 rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Shipping cargo" class="rounded-2xl w-full">
+                    </div>
+                    <div class="stats-card" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="text-lg font-semibold">15+ Years Experience</h4>
+                        <p class="text-sm">Trusted since 2008</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                        About <span class="gradient-text">Nordicora</span>
+                    </h1>
+                    <p class="text-gray-400 text-lg mb-8">
+                        Global Trade. Local Expertise. Trusted Partnerships. Founded by a team of industry experts with decades of experience, Nordicora connects cultures, markets, and opportunities. We specialize in luxury, premium, and ethically sourced products between Asia and Europe.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24">
+                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
+                            </svg>
+                            Decades of Industry Experience
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24">
+                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
+                            </svg>
+                            Global Network
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24">
+                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
+                            </svg>
+                            Full-Service Offering
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24">
+                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
+                            </svg>
+                            Tailored Solutions
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-lg mt-8">
+                        <strong>Mission:</strong> To make global trade simple, transparent, and successful for businesses who care about quality, ethics, and long-term growth.<br>
+                        <strong>Vision:</strong> To become a leading name in boutique international trade by blending Nordic reliability with global ambition.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="gradient-blob cyan"></div>
+            <div class="gradient-blob purple"></div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad',
+            offset: 120
+        });
+    </script>
+</body>
+</html>
