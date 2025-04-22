@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordicora - Contact Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-anim { animation: float 4s ease-in-out infinite; }
+        .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
+        .gradient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+        }
+        .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
+        .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
+        .form-input { width: 100%; padding: 1rem; background: #1f2937; border: 1px solid #374151; border-radius: 0.5rem; color: white; }
+        .submit-btn { width: 100%; padding: 1rem; background: #00b4d8; border-radius: 0.5rem; hover:bg-cyan-700; transition: background 0.3s; }
+        nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-md border-b border-gray-800 transition-all">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center float-anim transition-all group-hover:rotate-12">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    </svg>
+                </div>
+                <span class="text-2xl font-bold gradient-text">Nordicora</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link hover:text-cyan-400 transition-colors">Home</a>
+                <a href="services.html" class="nav-link hover:text-cyan-400 transition-colors">Services</a>
+                <a href="about.html" class="nav-link hover:text-cyan-400 transition-colors">About</a>
+                <a href="contact.html" class="px-6 py-2 bg-cyan-600 rounded-full hover:bg-cyan-700 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="min-h-screen flex items-center pt-32 relative">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <div class="contact-card" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-center">
+                    <span class="gradient-text">Contact Us</span>
+                </h1>
+                <p class="text-center text-gray-400 mb-12 max-w-xl mx-auto">
+                    Start Your Global Journey. Reach out to Nordicora to discuss how we can support your international trade needs with personalized service and expertise.
+                </p>
+                <form class="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <input type="text" placeholder="Your Name" class="form-input" required>
+                    <input type="email" placeholder="Email Address" class="form-input" required>
+                    <textarea rows="4" placeholder="Your Message" class="form-input" required></textarea>
+                    <button type="submit" class="submit-btn hover:bg-cyan-700">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="gradient-blob cyan"></div>
+            <div class="gradient-blob purple"></div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out-quad',
+            offset: 120
+        });
+    </script>
+</body>
+</html>
