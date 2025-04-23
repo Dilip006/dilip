@@ -82,41 +82,21 @@
             }
         }
         /* Spice Gallery Styles */
-        .spice-image {
+        .spice-item {
             position: relative;
-            overflow: hidden;
             border-radius: 1rem;
             transition: transform 0.3s ease;
-            aspect-ratio: 4 / 3; /* Ensure consistent image aspect ratio */
+            aspect-ratio: 4 / 3; /* Ensure consistent aspect ratio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
         }
-        .spice-image:hover {
+        .spice-item:hover {
             transform: scale(1.05);
         }
-        .spice-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .spice-image::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            transition: background 0.3s ease;
-        }
-        .spice-image:hover::after {
-            background: rgba(0, 0, 0, 0.1);
-        }
-        .spice-image-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+        .spice-item-caption {
             padding: 1rem;
-            background: rgba(0, 0, 0, 0.6);
             color: white;
             text-align: center;
             font-size: 0.9rem;
@@ -206,47 +186,40 @@
         </div>
     </section>
 
-    <!-- Spice Journey Section -->
+    <!-- Spice Journey Section (Updated to Remove Images) -->
     <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
                 The <span class="gradient-text">Spice Journey</span> from Asia to Europe
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Image 1: Cinnamon -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/cinnamon.jpg.png" alt="Cinnamon" onerror="this.src='https://via.placeholder.com/400x300?text=Cinnamon+Image+Not+Found';">
-                    <div class="spice-image-caption">Cinnamon sticks from Sri Lanka</div>
+                <!-- Item 1: Cinnamon -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="spice-item-caption">Cinnamon sticks from Sri Lanka</div>
                 </div>
-                <!-- Image 2: Turmeric -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/turmeric.jpg.png" alt="Turmeric" onerror="this.src='https://via.placeholder.com/400x300?text=Turmeric+Image+Not+Found';">
-                    <div class="spice-image-caption">Fresh turmeric roots</div>
+                <!-- Item 2: Turmeric -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="spice-item-caption">Fresh turmeric roots</div>
                 </div>
-                <!-- Image 3: Ceylon Black Tea -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/ceylon-black-tea.jpg.png" alt="Ceylon Black Tea" onerror="this.src='https://via.placeholder.com/400x300?text=Ceylon+Black+Tea+Image+Not+Found';">
-                    <div class="spice-image-caption">Ceylon black tea leaves</div>
+                <!-- Item 3: Ceylon Black Tea -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="spice-item-caption">Ceylon black tea leaves</div>
                 </div>
-                <!-- Image 4: Curry Paste -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="400">
-                    <img src="images/curry-paste.jpg.png" alt="Curry Paste" onerror="this.src='https://via.placeholder.com/400x300?text=Curry+Paste+Image+Not+Found';">
-                    <div class="spice-image-caption">Homemade curry paste</div>
+                <!-- Item 4: Curry Paste -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="spice-item-caption">Homemade curry paste</div>
                 </div>
-                <!-- Image 5: Ceylon Pepper Black -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="500">
-                    <img src="images/ceylon-pepper-black.jpg.png" alt="Ceylon Pepper Black" onerror="this.src='https://via.placeholder.com/400x300?text=Ceylon+Pepper+Black+Image+Not+Found';">
-                    <div class="spice-image-caption">Ceylon black peppercorns</div>
+                <!-- Item 5: Ceylon Pepper Black -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="spice-item-caption">Ceylon black peppercorns</div>
                 </div>
-                <!-- Image 6: Cloves -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="600">
-                    <img src="images/cloves.jpg.png" alt="Cloves" onerror="this.src='https://via.placeholder.com/400x300?text=Cloves+Image+Not+Found';">
-                    <div class="spice-image-caption">Whole cloves from Asia</div>
+                <!-- Item 6: Cloves -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="spice-item-caption">Whole cloves from Asia</div>
                 </div>
-                <!-- Image 7: Cardamom -->
-                <div class="spice-image" data-aos="fade-up" data-aos-delay="700">
-                    <img src="images/cardamom.jpg.png" alt="Cardamom" onerror="this.src='https://via.placeholder.com/400x300?text=Cardamom+Image+Not+Found';">
-                    <div class="spice-image-caption">Green cardamom pods</div>
+                <!-- Item 7: Cardamom -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="700">
+                    <div class="spice-item-caption">Green cardamom pods</div>
                 </div>
             </div>
         </div>
