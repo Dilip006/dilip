@@ -20,6 +20,10 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        @keyframes icon-bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
         .float-anim { animation: float 4s ease-in-out infinite; }
         .gradient-text { background: linear-gradient(45deg, #00b4d8, #90e0ef); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .glow { filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.4)); }
@@ -82,7 +86,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            min-height: 300px;
+            min-height: 350px;
         }
         .timeline::before {
             content: '';
@@ -123,13 +127,24 @@
         .timeline-content:hover {
             transform: scale(1.05);
         }
+        .timeline-content .icon {
+            width: 40px;
+            height: 40px;
+            margin: 0 auto 10px;
+            animation: icon-bounce 1.5s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+        .timeline-content:hover .icon {
+            transform: scale(1.1);
+        }
         .timeline-content h3 {
             color: #00b4d8;
             font-weight: bold;
             margin-bottom: 10px;
+            font-size: 1.2rem;
         }
         .timeline-content p {
-            color: #d1d5db; /* Tailwind gray-300 */
+            color: #d fiamma db; /* Tailwind gray-300 */
             font-size: 0.9rem;
         }
         @media (max-width: 768px) {
@@ -171,7 +186,7 @@
             <!-- Hamburger Icon for Mobile -->
             <button id="hamburger" class="md:hidden focus:outline-none">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" strokejoins="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
             <!-- Desktop Navigation -->
@@ -212,48 +227,63 @@
             </div>
             <!-- Horizontal Timeline -->
             <div class="timeline">
-                <!-- Milestone 1 -->
+                <!-- Milestone 1: Quality -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>2005 - Founded on Quality</h3>
+                        <svg class="icon text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.783-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+                        </svg>
+                        <h3>Commitment to Quality</h3>
                         <p>
-                            Nordicora begins with a commitment to high standards, sourcing authentic Ceylon cinnamon from trusted Sri Lankan suppliers.
+                            Nordicora sources authentic, premium goods, like Ceylon cinnamon, upholding the highest standards.
                         </p>
                     </div>
                 </div>
-                <!-- Milestone 2 -->
+                <!-- Milestone 2: Operations -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>2010 - Seamless Operations</h3>
+                        <svg class="icon text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+                        </svg>
+                        <h3>Seamless Operations</h3>
                         <p>
-                            We streamline import/export operations, ensuring luxury goods move effortlessly between Asia and Europe.
+                            Our streamlined import/export systems ensure goods move swiftly and reliably between Asia and Europe.
                         </p>
                     </div>
                 </div>
-                <!-- Milestone 3 -->
+                <!-- Milestone 3: Suppliers -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>2015 - Trusted Networks</h3>
+                        <svg class="icon text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9.86v4.28c0 .66-.54 1.2-1.2 1.2H7.2c-.66 0-1.2-.54-1.2-1.2V9.86m12 0c0-.66-.54-1.2-1.2-1.2H7.2c-.66 0-1.2.54-1.2 1.2m12 0c0-2.65-2.15-4.8-4.8-4.8h-2.4c-2.65 0-4.8 2.15-4.8 4.8m12 4.8c0 2.65-2.15 4.8-4.8 4.8h-2.4c-2.65 0-4.8-2.15-4.8-4.8"/>
+                        </svg>
+                        <h3>Trusted Networks</h3>
                         <p>
-                            Our supplier relationships grow across 15 countries, fostering trust and cultural exchange through premium trade.
+                            We build strong supplier relationships across continents, fostering trust and cultural exchange.
                         </p>
                     </div>
                 </div>
-                <!-- Milestone 4 -->
+                <!-- Milestone 4: Compliance -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>2020 - Regulatory Excellence</h3>
+                        <svg class="icon text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <h3>Regulatory Mastery</h3>
                         <p>
-                            Nordicora masters EU and international trade compliance, ensuring smooth, legal operations for clients.
+                            Nordicora ensures compliance with EU and international regulations, keeping trade smooth and legal.
                         </p>
                     </div>
                 </div>
-                <!-- Milestone 5 -->
+                <!-- Milestone 5: Personalized Service -->
                 <div class="timeline-item" data-aos="fade-up">
                     <div class="timeline-content">
-                        <h3>2025 - Personalized Global Trade</h3>
+                        <svg class="icon text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                        <h3>Personalized Trade</h3>
                         <p>
-                            Today, Nordicora offers tailored services with a global vision, connecting markets with authenticity and innovation.
+                            We offer tailored services with a global vision, connecting markets with innovation and authenticity.
                         </p>
                     </div>
                 </div>
