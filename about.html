@@ -28,15 +28,14 @@
         }
         .gradient-blob.cyan { background: #00b4d8; width: 500px; height: 500px; top: 0; left: 0; }
         .gradient-blob.purple { background: #7209b7; width: 400px; height: 400px; bottom: 0; right: 0; }
-        .stats-card { position: absolute; bottom: -20px; right: 20px; background: #00b4d8; padding: 1rem 2rem; border-radius: 1rem; color: white; }
-        .gradient-border { background: linear-gradient(45deg, #00b4d8, #90e0ef); }
-        .feature-item { display: flex; align-items: center; gap: 0.5rem; }
-        .check-icon { width: 24px; height: 24px; fill: #00b4d8; }
+        .cta-btn { padding: 1rem 2rem; border-radius: 9999px; transition: background 0.3s, border 0.3s; }
         nav.scrolled { @apply bg-gray-900/95 shadow-lg; }
         /* Enhanced Button Styles with Animation (Used for both top and mobile nav) */
         .nav-button {
             @apply relative px-6 py-3 bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-full text-white font-semibold transition-all duration-300;
             overflow: hidden;
+            display: block; /* Ensure each button takes its own line */
+            text-align: center; /* Center the text within the button */
         }
         .nav-button::before {
             content: '';
@@ -69,6 +68,66 @@
             .mobile-menu {
                 display: none;
             }
+        }
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: linear-gradient(to bottom, #00b4d8, #90e0ef);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+        .timeline-item {
+            padding: 20px 40px;
+            position: relative;
+            background: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: #00b4d8;
+            border: 3px solid #90e0ef;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            text-align: right;
+        }
+        .timeline-item:nth-child(odd)::after {
+            right: -8px;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            text-align: left;
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -8px;
+        }
+        .timeline-content {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .timeline-content h3 {
+            color: #00b4d8;
+            font-weight: bold;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -115,70 +174,65 @@
         </div>
     </div>
 
-    <!-- Navigation Buttons Below Navbar -->
-    <div class="container mx-auto px-6 pt-24 flex flex-wrap justify-center">
-        <a href="index.html" class="nav-button">Home</a>
-        <a href="services.html" class="nav-button">Services</a>
-        <a href="about.html" class="nav-button">About Us</a>
-        <a href="contact.html" class="nav-button">Contact Us</a>
-    </div>
-
-    <!-- About Section -->
-    <section class="min-h-screen flex items-center pt-32 relative">
+    <!-- About Us Section -->
+    <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="relative" data-aos="fade-right">
-                    <div class="gradient-border p-1 rounded-3xl">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Shipping cargo" class="rounded-2xl w-full">
-                    </div>
-                    <div class="stats-card" data-aos="fade-up" data-aos-delay="400">
-                        <h4 class="text-lg font-semibold">15+ Years Experience</h4>
-                        <p class="text-sm">Trusted since 2008</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                About <span class="gradient-text">Nordicora</span>
+            </h2>
+            <div class="text-center mb-12">
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Nordicora is dedicated to bridging the vibrant cultures of Asia and Europe through trade, trust, and tradition. Our journey is a story of connection, quality, and cultural exchange.
+                </p>
+            </div>
+            <!-- Creative Timeline -->
+            <div class="timeline">
+                <!-- Milestone 1 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>2005 - The Journey Begins</h3>
+                        <p class="text-gray-300">
+                            Nordicora was founded with a vision to connect Asia and Europe through the trade of premium spices, starting with Ceylon cinnamon from Sri Lanka.
+                        </p>
                     </div>
                 </div>
-                <div data-aos="fade-left" data-aos-delay="200">
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                        About <span class="gradient-text">Nordicora</span>
-                    </h1>
-                    <p class="text-gray-400 text-lg mb-8">
-                        Global Trade. Local Expertise. Trusted Partnerships. Founded by a team of industry experts with decades of experience, Nordicora connects cultures, markets, and opportunities. We specialize in luxury, premium, and ethically sourced products between Asia and Europe.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Decades of Industry Experience
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Global Network
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Full-Service Offering
-                        </div>
-                        <div class="feature-item">
-                            <svg class="check-icon" viewBox="0 0 24 24">
-                                <path d="M9 16.2l-3.5-3.5a.984.984 0 0 0-1.4 0 .984.984 0 0 0 0 1.4l4.2 4.2c.39.39 1.01.39 1.4 0l8.4-8.4a.984.984 0 0 0 0-1.4.984.984 0 0 0-1.4 0L9 16.2z"/>
-                            </svg>
-                            Tailored Solutions
-                        </div>
+                <!-- Milestone 2 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>2010 - Expanding Horizons</h3>
+                        <p class="text-gray-300">
+                            We broadened our offerings to include luxury goods, bringing European sophistication to Asian markets and vice versa.
+                        </p>
                     </div>
-                    <p class="text-gray-400 text-lg mt-8">
-                        <strong>Mission:</strong> To make global trade simple, transparent, and successful for businesses who care about quality, ethics, and long-term growth.<br>
-                        <strong>Vision:</strong> To become a leading name in boutique international trade by blending Nordic reliability with global ambition.
-                    </p>
+                </div>
+                <!-- Milestone 3 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>2015 - Cultural Bridges</h3>
+                        <p class="text-gray-300">
+                            Nordicora launched initiatives to promote cultural exchange, supporting artisans and preserving heritage crafts across continents.
+                        </p>
+                    </div>
+                </div>
+                <!-- Milestone 4 -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <h3>2020 - A Global Network</h3>
+                        <p class="text-gray-300">
+                            Our network grew to span over 20 countries, ensuring seamless trade and fostering partnerships built on trust and quality.
+                        </p>
+                    </div>
+                </div>
+                <!-- Milestone 5 -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>2025 - Today and Beyond</h3>
+                        <p class="text-gray-300">
+                            Nordicora continues to innovate, bringing the best of Asia and Europe to the world while staying true to our roots of authenticity and excellence.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="absolute inset-0 -z-10 opacity-20">
-            <div class="gradient-blob cyan"></div>
-            <div class="gradient-blob purple"></div>
         </div>
     </section>
 
