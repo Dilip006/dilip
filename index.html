@@ -82,25 +82,19 @@
             }
         }
         /* Spice Gallery Styles */
-        .spice-item {
+        .spice-image-container {
             position: relative;
             border-radius: 1rem;
+            overflow: hidden;
             transition: transform 0.3s ease;
-            aspect-ratio: 4 / 3; /* Ensure consistent aspect ratio */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(0, 0, 0, 0.2);
         }
-        .spice-item:hover {
+        .spice-image-container:hover {
             transform: scale(1.05);
         }
-        .spice-item-caption {
-            padding: 1rem;
-            color: white;
-            text-align: center;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .spice-image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -186,41 +180,14 @@
         </div>
     </section>
 
-    <!-- Spice Journey Section (Updated to Remove Images) -->
+    <!-- Spice Journey Section (Updated to Use Combined Image) -->
     <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
                 The <span class="gradient-text">Spice Journey</span> from Asia to Europe
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Item 1: Cinnamon -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="100">
-                    <div class="spice-item-caption">Cinnamon sticks from Sri Lanka</div>
-                </div>
-                <!-- Item 2: Turmeric -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="200">
-                    <div class="spice-item-caption">Fresh turmeric roots</div>
-                </div>
-                <!-- Item 3: Ceylon Black Tea -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="spice-item-caption">Ceylon black tea leaves</div>
-                </div>
-                <!-- Item 4: Curry Paste -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="spice-item-caption">Homemade curry paste</div>
-                </div>
-                <!-- Item 5: Ceylon Pepper Black -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="spice-item-caption">Ceylon black peppercorns</div>
-                </div>
-                <!-- Item 6: Cloves -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="600">
-                    <div class="spice-item-caption">Whole cloves from Asia</div>
-                </div>
-                <!-- Item 7: Cardamom -->
-                <div class="spice-item" data-aos="fade-up" data-aos-delay="700">
-                    <div class="spice-item-caption">Green cardamom pods</div>
-                </div>
+            <div class="spice-image-container" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/spice-journey.PNG" alt="Spice Journey" onerror="this.src='https://via.placeholder.com/1200x600?text=Spice+Journey+Image+Not+Found';">
             </div>
         </div>
     </section>
