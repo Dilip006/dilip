@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         @keyframes float {
             0%, 100% { transform: translateY(0); }
@@ -90,16 +92,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.5); /* Background for icon container */
         }
         .spice-item:hover {
             transform: scale(1.05);
         }
-        .spice-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 1rem;
+        .spice-item i {
+            font-size: 4rem; /* Large icon size */
+            color: #00b4d8; /* Cyan color to match theme */
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .spice-item:hover i {
+            opacity: 1;
         }
         .spice-item-caption {
             position: absolute;
@@ -199,47 +204,57 @@
         </div>
     </section>
 
-    <!-- Spice Journey Section with Images -->
+    <!-- Spice Journey Section with Icons for New Products -->
     <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
                 The <span class="gradient-text">Spice Journey</span> from Asia to Europe
             </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                <!-- Item 1: Cinnamon -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
+                <!-- Item 1: Cashew Nuts -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1596049908334-455717f9c8e2" alt="Cinnamon sticks from Sri Lanka">
-                    <div class="spice-item-caption">Cinnamon sticks from Sri Lanka</div>
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="spice-item-caption">Cashew nuts</div>
                 </div>
-                <!-- Item 2: Turmeric -->
+                <!-- Item 2: Chili Powder -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1565877233331-093b54c84a39" alt="Fresh turmeric roots">
-                    <div class="spice-item-caption">Fresh turmeric roots</div>
+                    <i class="fa-solid fa-fire"></i>
+                    <div class="spice-item-caption">Chili powder</div>
                 </div>
-                <!-- Item 3: Ceylon Black Tea -->
+                <!-- Item 3: Roasted Cocoa Beans -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1571931468289-38b2dbdcp7e6" alt="Ceylon black tea leaves">
-                    <div class="spice-item-caption">Ceylon black tea leaves</div>
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="spice-item-caption">Roasted cocoa beans</div>
                 </div>
-                <!-- Item 4: Curry Paste -->
+                <!-- Item 4: Arabica Coffee -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://images.unsplash.com/photo-1599979559874-9d6b5f2e8b9f" alt="Homemade curry paste">
-                    <div class="spice-item-caption">Homemade curry paste</div>
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <div class="spice-item-caption">Arabica coffee</div>
                 </div>
-                <!-- Item 5: Ceylon Black Pepper -->
+                <!-- Item 5: Sugarcane Syrup -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="500">
-                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Ceylon black peppercorns">
-                    <div class="spice-item-caption">Ceylon black peppercorns</div>
+                    <i class="fa-solid fa-jar"></i>
+                    <div class="spice-item-caption">Sugarcane syrup</div>
                 </div>
-                <!-- Item 6: Cloves -->
+                <!-- Item 6: Sugarcane Jaggery -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="600">
-                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Whole cloves from Asia">
-                    <div class="spice-item-caption">Whole cloves from Asia</div>
+                    <i class="fa-solid fa-cube"></i>
+                    <div class="spice-item-caption">Sugarcane jaggery</div>
                 </div>
-                <!-- Item 7: Cardamom -->
+                <!-- Item 7: Cinnamon Powder -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="700">
-                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Green cardamom pods">
-                    <div class="spice-item-caption">Green cardamom pods</div>
+                    <i class="fa-solid fa-staff"></i>
+                    <div class="spice-item-caption">Cinnamon powder</div>
+                </div>
+                <!-- Item 8: Black Peppercorns -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="800">
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="spice-item-caption">Black peppercorns</div>
+                </div>
+                <!-- Item 9: Black Pepper Powder -->
+                <div class="spice-item" data-aos="fade-up" data-aos-delay="900">
+                    <i class="fa-solid fa-seedling"></i>
+                    <div class="spice-item-caption">Black pepper powder</div>
                 </div>
             </div>
         </div>
