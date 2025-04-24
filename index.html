@@ -95,12 +95,25 @@
         .spice-item:hover {
             transform: scale(1.05);
         }
+        .spice-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
         .spice-item-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
             padding: 1rem;
             color: white;
             text-align: center;
             font-size: 0.9rem;
             font-weight: 500;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
         }
     </style>
 </head>
@@ -186,7 +199,7 @@
         </div>
     </section>
 
-    <!-- Spice Journey Section (Updated to Remove Image and Use Placeholders) -->
+    <!-- Spice Journey Section with Images -->
     <section class="py-16 bg-gray-900">
         <div class="container mx-auto px-6">
             <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
@@ -195,30 +208,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <!-- Item 1: Cinnamon -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1596049908334-455717f9c8e2" alt="Cinnamon sticks from Sri Lanka">
                     <div class="spice-item-caption">Cinnamon sticks from Sri Lanka</div>
                 </div>
                 <!-- Item 2: Turmeric -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1565877233331-093b54c84a39" alt="Fresh turmeric roots">
                     <div class="spice-item-caption">Fresh turmeric roots</div>
                 </div>
                 <!-- Item 3: Ceylon Black Tea -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1571931468289-38b2dbdcp7e6" alt="Ceylon black tea leaves">
                     <div class="spice-item-caption">Ceylon black tea leaves</div>
                 </div>
                 <!-- Item 4: Curry Paste -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1599979559874-9d6b5f2e8b9f" alt="Homemade curry paste">
                     <div class="spice-item-caption">Homemade curry paste</div>
                 </div>
-                <!-- Item 5: Ceylon Pepper Black -->
+                <!-- Item 5: Ceylon Black Pepper -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Ceylon black peppercorns">
                     <div class="spice-item-caption">Ceylon black peppercorns</div>
                 </div>
                 <!-- Item 6: Cloves -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="600">
+                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Whole cloves from Asia">
                     <div class="spice-item-caption">Whole cloves from Asia</div>
                 </div>
                 <!-- Item 7: Cardamom -->
                 <div class="spice-item" data-aos="fade-up" data-aos-delay="700">
+                    <img src="https://images.unsplash.com/photo-1606913341975-996d4b72b768" alt="Green cardamom pods">
                     <div class="spice-item-caption">Green cardamom pods</div>
                 </div>
             </div>
