@@ -7,6 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Add GSAP and ScrollTrigger -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -60,6 +62,10 @@
         .nav-button:hover {
             @apply scale-105 shadow-lg;
             animation: pulse 1s infinite;
+        }
+        /* Highlight current page in nav */
+        .nav-button.active {
+            @apply bg-gradient-to-r from-cyan-400 to-cyan-600 scale-105 shadow-lg;
         }
         /* Mobile Menu Styles */
         .mobile-menu {
@@ -144,7 +150,7 @@
             font-size: 1.2rem;
         }
         .timeline-content p {
-            color: #d fiamma db; /* Tailwind gray-300 */
+            color: #d1d5db; /* Tailwind gray-300 */
             font-size: 0.9rem;
         }
         @media (max-width: 768px) {
@@ -169,6 +175,12 @@
                 transform: translateY(-50%);
             }
         }
+        /* Inline Icons in Text */
+        .inline-icon {
+            color: #00b4d8;
+            opacity: 0.8;
+            margin: 0 4px;
+        }
     </style>
 </head>
 <body class="bg-gray-900 text-white overflow-x-hidden">
@@ -186,14 +198,14 @@
             <!-- Hamburger Icon for Mobile -->
             <button id="hamburger" class="md:hidden focus:outline-none">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" strokejoins="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
             <!-- Desktop Navigation -->
             <div class="hidden md:flex space-x-8 items-center">
                 <a href="index.html" class="nav-button">Home</a>
                 <a href="services.html" class="nav-button">Services</a>
-                <a href="about.html" class="nav-button">About</a>
+                <a href="about.html" class="nav-button active">About</a>
                 <a href="contact.html" class="nav-button">Contact</a>
             </div>
         </div>
@@ -209,7 +221,7 @@
         <div class="flex flex-col space-y-4">
             <a href="index.html" class="nav-button">Home</a>
             <a href="services.html" class="nav-button">Services</a>
-            <a href="about.html" class="nav-button">About Us</a>
+            <a href="about.html" class="nav-button active">About Us</a>
             <a href="contact.html" class="nav-button">Contact Us</a>
         </div>
     </div>
@@ -290,6 +302,46 @@
             </div>
         </div>
     </section>
+
+    <!-- Our Mission Section -->
+    <section class="py-16 bg-gray-900 relative">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">
+                <span class="gradient-text">Our Mission</span>
+            </h2>
+            <div class="max-w-2xl mx-auto text-center" data-aos="fade-up" data-aos-delay="200">
+                <p class="text-lg text-white mb-6">
+                    At Nordicora, we bridge the rich flavors of Asia with the refined markets of Europe. Based in Denmark, our company is dedicated to sourcing and delivering premium goods—from exotic spices to roasted cocoa beans—with unwavering quality and integrity.
+                </p>
+                <p class="text-lg text-white mb-6">
+                    Our journey began with a passion for authentic taste and a global mindset. Today, we proudly trade in a variety of sought-after ingredients such as 
+                    <i class="fa-solid fa-staff inline-icon"></i> cinnamon, 
+                    <i class="fa-solid fa-leaf inline-icon"></i> turmeric, 
+                    <i class="fa-solid fa-mug-hot inline-icon"></i> black tea, 
+                    <i class="fa-solid fa-fire inline-icon"></i> curry paste, 
+                    <i class="fa-solid fa-seedling inline-icon"></i> black pepper, 
+                    <i class="fa-solid fa-star inline-icon"></i> cloves, and 
+                    <i class="fa-solid fa-seedling inline-icon"></i> cardamom. 
+                    We work closely with trusted producers across Asia to ensure every product meets our exacting standards.
+                </p>
+                <p class="text-lg text-white mb-6">
+                    Whether it’s the warmth of <i class="fa-solid fa-staff inline-icon"></i> cinnamon, the boldness of <i class="fa-solid fa-seedling inline-icon"></i> black pepper, or the richness of <i class="fa-solid fa-seedling inline-icon"></i> roasted cocoa beans, Nordicora brings the world’s finest natural goods to European kitchens and beyond. With transparency, sustainability, and excellence at our core, we’re more than a trade partner—we’re a bridge between cultures, flavors, and people.
+                </p>
+                <p class="text-lg text-white font-semibold">
+                    Nordicora – Where East meets West, and quality knows no borders.
+                </p>
+            </div>
+        </div>
+        <div class="absolute inset-0 -z-10 opacity-20">
+            <div class="gradient-blob cyan"></div>
+            <div class="gradient-blob purple"></div>
+        </div>
+    </section>
+
+    <!-- Footer with All Rights Reserved -->
+    <footer class="py-8 bg-gray-900 text-center">
+        <p class="text-gray-400">© 2025 Nordicora. All rights reserved.</p>
+    </footer>
 
     <script>
         // Initialize AOS animations
